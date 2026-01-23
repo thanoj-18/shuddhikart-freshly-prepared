@@ -2,95 +2,116 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+/* ShuddhiKart Design System - Warm, Traditional, Trust-Driven */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core Colors - Warm Ivory & Deep Brown */
+    --background: 40 33% 97%;
+    --foreground: 24 32% 17%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 40 30% 95%;
+    --card-foreground: 24 32% 17%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 40 33% 97%;
+    --popover-foreground: 24 32% 17%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Deep Earthy Brown */
+    --primary: 24 32% 22%;
+    --primary-foreground: 40 33% 97%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Warm Cream */
+    --secondary: 38 40% 92%;
+    --secondary-foreground: 24 32% 17%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted - Soft Beige */
+    --muted: 36 25% 88%;
+    --muted-foreground: 24 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Sage Green (Trust) */
+    --accent: 95 20% 42%;
+    --accent-foreground: 40 33% 97%;
+
+    /* Gold Highlight */
+    --gold: 43 55% 58%;
+    --gold-foreground: 24 32% 17%;
+
+    /* WhatsApp Green */
+    --whatsapp: 142 70% 40%;
+    --whatsapp-foreground: 0 0% 100%;
+
+    /* Festive Warm */
+    --festive: 32 75% 92%;
+    --festive-foreground: 24 32% 17%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 36 25% 85%;
+    --input: 36 25% 85%;
+    --ring: 95 20% 42%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar */
+    --sidebar-background: 40 30% 95%;
+    --sidebar-foreground: 24 32% 17%;
+    --sidebar-primary: 24 32% 22%;
+    --sidebar-primary-foreground: 40 33% 97%;
+    --sidebar-accent: 95 20% 42%;
+    --sidebar-accent-foreground: 40 33% 97%;
+    --sidebar-border: 36 25% 85%;
+    --sidebar-ring: 95 20% 42%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 24 25% 10%;
+    --foreground: 40 33% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 24 20% 14%;
+    --card-foreground: 40 33% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 24 25% 10%;
+    --popover-foreground: 40 33% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 40 33% 92%;
+    --primary-foreground: 24 32% 17%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 24 20% 18%;
+    --secondary-foreground: 40 33% 95%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 24 15% 22%;
+    --muted-foreground: 36 15% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 95 25% 50%;
+    --accent-foreground: 24 32% 10%;
+
+    --gold: 43 55% 58%;
+    --gold-foreground: 24 32% 10%;
+
+    --whatsapp: 142 70% 45%;
+    --whatsapp-foreground: 0 0% 100%;
+
+    --festive: 32 40% 18%;
+    --festive-foreground: 40 33% 95%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 24 15% 22%;
+    --input: 24 15% 22%;
+    --ring: 95 25% 50%;
+
+    --sidebar-background: 24 20% 14%;
+    --sidebar-foreground: 40 33% 95%;
+    --sidebar-primary: 40 33% 92%;
+    --sidebar-primary-foreground: 24 32% 17%;
+    --sidebar-accent: 95 25% 50%;
+    --sidebar-accent-foreground: 24 32% 10%;
+    --sidebar-border: 24 15% 22%;
+    --sidebar-ring: 95 25% 50%;
   }
 }
 
@@ -100,6 +121,44 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 py-16 md:px-8 md:py-24 lg:px-16 lg:py-32;
+  }
+
+  .container-narrow {
+    @apply max-w-6xl mx-auto;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Trust badge styling */
+  .trust-badge {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium;
+  }
+
+  /* Card hover effect */
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+
+  /* Gradient overlays */
+  .gradient-warm {
+    background: linear-gradient(135deg, hsl(var(--festive)) 0%, hsl(var(--background)) 100%);
+  }
+
+  /* WhatsApp button special */
+  .btn-whatsapp {
+    @apply bg-whatsapp text-whatsapp-foreground hover:bg-whatsapp/90 shadow-lg shadow-whatsapp/20;
   }
 }
